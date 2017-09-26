@@ -2,6 +2,10 @@
 #include <stack>
 #include <vector>
 
+#ifdef INFINITY
+#undef INFINITY
+#endif
+
 #include "src/ir/dfa/dfa.h"
 
 namespace re2c
