@@ -1,1 +1,10 @@
 O.*/
+bin/
+.deps/
+doc/
+config.log
+config.status
+run_tests.sh
+stamp-h1
+config.h
+re2cApp/src/re2c-src/Makefile
