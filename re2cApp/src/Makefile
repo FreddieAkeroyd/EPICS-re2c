@@ -3,6 +3,12 @@ TOP=../..
 include $(TOP)/configure/CONFIG
 
 PROD_HOST = re2c
+ifneq ($(findstring win32-x86,$(EPICS_HOST_ARCH)),)
+EPICS_ARCH=win32-x86
+endif
+ifneq ($(findstring windows-x64,$(EPICS_HOST_ARCH)),)
+EPICS_ARCH=windows-x64
+endif
 
 RE2CSRC = $(TOP)/re2cApp/src/re2c-src
 
@@ -92,7 +98,7 @@ include $(TOP)/configure/RULES
 #----------------------------------------
 #  ADD RULES AFTER THIS LINE
 
-$(RE2CSRC)/config.h : $(RE2CSRC)/config.h-$(OS_CLASS)
+$(RE2CSRC)/config.h : $(RE2CSRC)/config.h-$(EPICS_ARCH)
 	$(CP) $< $@
 
 $(RE2CSRC)/src/codegen/bitmap.cc : $(RE2CSRC)/config.h
