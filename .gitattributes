@@ -1,0 +1,10 @@
+* text=auto
+*.c text
+*.sh text eol=lf
+*.h text
+*.cc text
+*.re text
+*.ac text
+*.am text
+*.in text
+*.m4 text
