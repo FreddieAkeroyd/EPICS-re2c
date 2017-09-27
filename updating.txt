@@ -1,7 +1,7 @@
 
-contains a config.h-WIN32 aka config.h-$(OS_CLASS) that was generated via:
+contains config.h-windows-x64 and config.h-win32-x86 in re2c-src directory that was generated via e.g.
 
     ./configure --host i686-w64-mingw32
 
-on MinGW. This file is automatically copied to config.h by a Makefile rule
+on MinGW. The appropriate one is automatically copied to config.h by a Makefile rule
 
